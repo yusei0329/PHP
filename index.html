@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta format-detection="telephone=no">
+	<meta name="description" content="TEST">
+	<title>OKAZAKI Gourmet</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+
+<header>
+	<a href="./"><img src="images/logo.jpg"></a>
+</header>
+
+<main>
+
+<section data-module="hero_top">
+	<form method="post" action="">
+		<h1>岡崎の知りたい店舗がすぐ見つかる</h1>
+		<input type="text" name="word" placeholder="キーワード（例：おでん）">
+		<input type="submit" value="検索">
+		<a href="list_all.html" class="but">登録店舗一覧</a>
+	</form>
+</section>
+
+
+<section data-module="genre">
+<h2 data-english="Genre">料理ジャンルから探す</h2>
+<aside>
+	<a href='list.php?=id'><img src='images/cate1.jpg'></a>
+	<h3>和食</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate2.jpg'></a>
+	<h3>和食/懐石</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate3.jpg'></a>
+	<h3>寿司</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate4.jpg'></a>
+	<h3>洋食</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate5.jpg'></a>
+	<h3>中華</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate6.jpg'></a>
+	<h3>イタリアン・フレンチ</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate7.jpg'></a>
+	<h3>インド</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate8.jpg'></a>
+	<h3>カフェ・喫茶店</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate9.jpg'></a>
+	<h3>焼肉・ステーキ</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate10.jpg'></a>
+	<h3>居酒屋</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate11.jpg'></a>
+	<h3>ダイニングバー</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate12.jpg'></a>
+	<h3>バー・バル</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate13.jpg'></a>
+	<h3>ラーメン</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate14.jpg'></a>
+	<h3>うどん</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate15.jpg'></a>
+	<h3>とんかつ</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate16.jpg'></a>
+	<h3>お好み焼き</h3>
+</aside>
+<aside>
+	<a href='list.php'><img src='images/cate17.jpg'></a>
+	<h3>その他</h3>
+</aside>
+</section>
+
+<section data-module="recommended">
+	<h2 data-english="Recommended">おすすめ特集</h2>
+	<aside><a href="list.html"><img src="images/bnr_01.jpg" alt=""/>学生向け量が★5以上のお店</a></aside>
+	<aside><a href="list.html"><img src="images/bnr_02.jpg" alt=""/>デートで使える雰囲気が★5以上のお店</a></aside>
+	<aside><a href="list.html"><img src="images/bnr_03.jpg" alt=""/>全てが★4以上のお店</a></aside>
+</section>
+
+<section data-module="detailed">
+<div class="inner">
+<div class="PageColumn_50" data-para="right">
+<h2 data-english="Detailed">詳細検索</h2>
+<p>
+定休日や、駐車台数、予算や収容人数から詳細検索ができます。
+入力していないものは検索対象になりません。
+</p>
+</div>
+<div class="PageColumn_50" data-para="left">
+	<form method="post" action="">
+	<table>
+		<tr>
+			<th>定休日</th>
+			<td>
+					<select name="">
+						<option>選んでください</option>
+						<option value="無休">無休</option>
+						<option value="日">日</option>
+						<option value="月">月</option>
+						<option value="火">火</option>
+						<option value="水">水</option>
+						<option value="木">木</option>
+						<option value="金">金</option>
+						<option value="土">土</option>
+						<option value="不定休">不定休</option>
+					</select>
+			</td>
+		</tr>
+		<tr>
+			<th>駐車場</th>
+			<td>
+				<input type="number" size="5" min="0" max="100" name="">台以上
+			</td>
+		</tr>
+		<tr>
+			<th>ご予算</th>
+			<td>
+				<input type="number" size="5" min="0" max="10000" name="">円以上
+			</td>
+		</tr>
+		<tr>
+			<th>人数</th>
+			<td>
+				<input type="number" size="5" min="0" max="150" name="">名以上
+			</td>
+		</tr>
+	</table>
+	<input type="submit" value="検索" name="fullsearch">
+	</form>
+</div>
+</div>
+</section>
+
+<section data-module="company" id="company">
+<h2 data-english="Company">運営組織概要</h2>
+<table>
+	<tr>
+		<th>運営組織</th>
+		<td>愛知工業大学 情報科学部</td>
+	</tr>
+	<tr>
+		<th>所属</th>
+		<td>情報科学科 メディア情報専攻</td>
+	</tr>
+	<tr>
+		<th>代表者名</th>
+		<td>丹羽　佑成</td>
+	</tr>
+	<tr>
+		<th>学籍番号</th>
+		<td>X19068</td>
+	</tr>
+	<tr>
+		<th>住所</th>
+		<td>〒470-0392　愛知県豊田市八草町八千草1247　</td>
+	</tr>
+	<tr>
+		<th>TEL</th>
+		<td>0565-48-8121（代表）</td>
+	</tr>
+	<tr>
+</table>
+
+</section>
+
+</main>
+<footer>Copyright © 2020 xxxx.CO.,LTD</footer>
+</body>
+</html>

@@ -1,0 +1,386 @@
+@charset "UTF-8";
+body,html{
+	font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+	margin: 0px;
+	padding: 0px;
+}
+/*オートスクロール--------------------------*/
+html{scroll-behavior: smooth;}
+#wrapper #DivText a[name],
+#wrapper #DivText a[id]{
+	margin-top:  -50px;
+	padding-top: 50px;
+}
+/*Layout─────────────────────────────*/
+header{
+	position: sticky;
+	top: 0px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+	background: #fff;
+	z-index: 75;
+	box-shadow: 2px 2px 10px  rgba(0,0,0,0.2);
+}
+header img{
+	height: 100px;
+}
+footer{
+	height: 85px;
+	background: #ca7;
+	color: #fff;
+	/*上下センター寄せ*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main{
+	width: 100%;
+	overflow: hidden;
+}
+
+/*submenu─────────────────────────────*/
+#pc_menu li ul {
+	display: block;
+	position: absolute;
+	top: 45px;/*親メニューの高さと同じにする*/
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+#pc_menu li ul li {
+	visibility: hidden;
+	overflow: hidden;
+	height: 0;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+#pc_menu li:hover ul li,
+#pc_menu li a:hover ul li{
+	visibility: visible;
+	overflow: visible;
+	height:35px;
+	z-index: 10;
+}
+/*─────────────────────────────*/
+h1,h2,h3,h4,h5,h6,p,table{
+	padding: 0px;
+	text-align: center;
+	width: 100%;
+	margin: 2em auto 0em;
+}
+h1{
+	text-shadow: 1px 1px 10px  rgba(0,0,0,1);
+	color: #fff;
+	font-size: 2.1em;
+}
+h2[data-english]{
+	position:relative;
+	font-size: 1.2em;
+}
+h2[data-english]::before{
+	display:block;
+	content:attr(data-english);
+	font-family:"Century Gothic", sans-serif;
+	font-size: 3em;
+	font-weight: normal;
+	color: #900;
+}
+h2[data-english]::after{
+	display:block;
+	position: absolute;
+	top: 3.4em;
+	left: 50%;
+	transform:translate(-50%, -50%);
+	content:"";
+	height: 5px;
+	width: 200px;
+	margin: 0 auto;
+	background: #db4;
+}
+p{
+	text-align: left;
+}
+
+
+table{
+	border-collapse:collapse;
+	border-spacing:0px;
+	border:solid 1px #bbb;
+}
+table tr:hover td{
+	background: rgba( 128, 128, 128, 0.1 );
+}
+table th,
+table td{
+	padding: 1em 0.5em;
+	border: solid 1px #bbb;
+}
+table th{
+	background: #edc;
+}
+table td{
+	text-align: left;
+	background: #fff;
+}
+hr{
+	display: none;
+}
+img{
+	display: block;
+	margin: 0 auto;
+}
+/*SP*/
+@media screen and (max-width: 512px){
+	table {
+		box-shadow: none;
+		background: none;
+		border: none;
+		width: 95%;
+	}
+	table tr {
+		display: block;
+		margin: 0px 10px;
+		padding: 0px;
+		background-color: #fff;
+	}
+	table td,
+	table th {
+		display: block;
+	}
+}
+
+/*─────────────────────────────*/
+section{
+	max-width: 100%;
+	padding-left:calc(50% - 540px) ;
+	padding-right:calc(50% - 540px) ;
+	margin: 0px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+section aside {
+	box-shadow: 2px 2px 10px  rgba(0,0,0,0.2);
+	margin: 0.5rem;
+	background: #fff;
+}
+section aside h3 {
+	margin: 0.1rem;
+	font-size: 0.8em;
+}
+section aside img{
+	display: block;
+	width: 100%;
+}
+section aside:hover {
+	box-shadow: 2px 2px 10px  rgba(0,0,0,0.5);
+}
+section aside a{
+	text-decoration: none;
+	color: #990000;
+}
+section aside .banner{
+	color: #190680;
+}
+/*─────────────────────────────*/
+form input,
+form select{
+	box-sizing: border-box;
+	font-size: 20px;
+	padding: 15px;
+	border: 1px solid #ccc;
+/*	border-radius: 8px;*/
+}
+form input[type="submit"]{
+	cursor: pointer;
+	color: #fff;
+	background: #f66;
+	border-color: #f66;
+}
+form input[type="submit"]:hover{
+	background: #f00;
+}
+form select{
+	box-sizing: border-box;
+	width: 100%;
+}
+/*─────────────────────────────*/
+[class^="PageColumn_"],
+[class^="MobileColumn_"]{
+	box-sizing: border-box;
+	position:relative;
+	margin: 0px;
+	padding: 0px 5px;
+	min-height:1px;
+}
+.PageColumn_10,.MobileColumn_10{float: left;width:10%;}
+.PageColumn_20,.MobileColumn_20{float: left;width:20%;}
+.PageColumn_25,.MobileColumn_25{float: left;width:25%;}
+.PageColumn_30,.MobileColumn_30{float: left;width:30%;}
+.PageColumn_33,.MobileColumn_33{float: left;width:33.33%;}
+.PageColumn_40,.MobileColumn_40{float: left;width:40%;}
+.PageColumn_50,.MobileColumn_50{float: left;width:50%;}
+.PageColumn_60,.MobileColumn_60{float: left;width:60%;}
+.PageColumn_70,.MobileColumn_70{float: left;width:70%;}
+.PageColumn_75,.MobileColumn_75{float: left;width:75%;}
+.PageColumn_80,.MobileColumn_80{float: left;width:80%;}
+.PageColumn_90,.MobileColumn_90{float: left;width:90%;}
+.PageColumn_100{float: left;width:100%;}
+@media screen and (max-width: 840px) {
+	[class^="PageColumn_"]{width:100%;clear:both;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*─────────────────────────────────────*/
+/*ここよりオリジナル─────────────────────────*/
+/*─────────────────────────────────────*/
+[data-module^="hero_"]{
+	position: relative;
+	height: 540px;
+	max-width: 100%;
+	padding: 0px;
+	overflow: hidden;
+	background-image:url(../images/main.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+[data-module^="hero_"] form{
+	width: 90%;
+	max-width: 800px;
+	height: 100%;
+	margin-left: 5%;
+	margin-right: 5%;
+	z-index: 10;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+}
+[data-module^="hero_"] form input{
+	width: 80%;
+}
+[data-module^="hero_"] form input[type="text"]{
+	width: 80%;
+	border-radius: 8px 0px 0px 8px;
+}
+[data-module^="hero_"] form input[type="submit"]{
+	width: 20%;
+	border-radius: 0px 8px 8px 0px;
+}
+/*SP*/
+@media screen and (max-width: 512px){
+	[data-module="hero_top"]{
+		height: 250px;
+	}
+}
+/*─────────────────────────────*/
+[data-module]{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	scroll-snap-align: start;
+	padding-bottom: 50px;
+}
+/*常にモジュールが上下のセンターになるように*/
+[data-module] .inner{
+	align-items: center;
+	align-self: center;
+}
+/*─────────────────────────────*/
+/*各設定*/
+[data-module="genre"]{background-color: #fff;}
+[data-module="genre"] aside {
+	border-radius: 5px;
+	padding: 0.3rem;
+	width: 154px;
+}
+[data-module="recommended"]{background-color: #fed;}
+[data-module="recommended"] aside {
+	border-radius: 0px;
+	padding: 0;
+	width: 340px;
+}
+[data-module="detailed"]{background-color: #fff;}
+[data-module="detailed"] .inner{
+	padding: 20px;
+}
+[data-module="detailed"] .inner img{
+	width: 100%;
+}
+[data-module="company"]{background-color: #eee;}
+
+/*─────────────────────────────*/
+[data-module="hero_list"]{
+	background: none;
+	background-color: #ddd;
+	height: 100px;
+	padding: 0px;
+}
+[data-module="shoplist"] aside {
+	border-radius: 5px;
+	padding: 20px;
+	width: 100%;
+	margin-top: 50px;
+}
+
+/*─────────────────────────────*/
+[data-module="hero_title"]{
+	height: 150px;
+}
+/*─────────────────────────────*/
+.but{
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	margin: 20px auto;
+	padding: 1em;
+	text-decoration: none;
+	text-align: center;
+	background: #f66;
+	color: #fff;
+	box-shadow: 2px 2px 10px  rgba(0,0,0,0.5);
+}
+.but:hover{
+	background: #f00;
+	color: #fff;
+}
+.msg{
+	color: #000;
+	text-align: center;
+}
+.msg em{
+	color: #f00;
+	font-weight: bold;
+	font-style: normal;
+}
